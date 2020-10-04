@@ -2,7 +2,7 @@ FROM wordpress:5.5.1-php7.4-apache
 
 # Remove dangerous/hacker centric files
 RUN apt-get update -y \
- && apt-get install unzip
+ && apt-get install unzip \
  && rm -f /var/www/html/license.txt \
  && rm -f /var/www/html/readme.html \
  && rm -rf /var/www/html/wp-content/themes/twentyseventeen \
